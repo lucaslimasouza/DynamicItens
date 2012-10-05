@@ -10,7 +10,7 @@ update_position = (items_ids) ->
 	data = 
 		items: items_ids
 
-	$.get('items/update_position',data, (response) ->
+	$.get('admins/items/update_position',data, (response) ->
 			
 		).error( () ->
 				alert "Falha ao tentar ordenar os items!! :(" 
