@@ -25,6 +25,5 @@ module Sortable
 				query << "ELSE position END"
 			end
 		end
-
 	end	
 end
