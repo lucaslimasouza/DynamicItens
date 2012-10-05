@@ -25,7 +25,7 @@ class Admins::ItemsController < ApplicationController
 
 	def sort_by_name
 		Item.update_position(Item.by_name)
-		redirect_to admins_items_path
+		redirect_to root_path
 	end
 
 end

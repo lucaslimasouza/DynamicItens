@@ -1,0 +1,9 @@
+
+<% if admin_signed_in? %>
+	<li>
+		<%= link_to "Home", admins_items_path %>
+	</li>
+	<li>
+		<%= link_to "New Item", new_admins_item_path %>
+	</li>
+<%end%>

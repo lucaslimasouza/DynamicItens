@@ -5,9 +5,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= flash[:notice]%>
+<%= render 'layouts/contener_top'%>
 
-<%= yield %>
+<div class="structure">
+
+	<p style="color: green"><%= flash[:notice] %></p>
+
+	<ul class="menu_admin">
+	  <%= render 'admins/menu/items' %>
+	</ul>
+
+	<div class="contener_body">
+
+		<%= yield %>
+
+	</div>
+
+</div>
+
+<%= render 'layouts/footer' %>
 
 </body>
 <%= stylesheet_link_tag    "application", :media => "all" %>

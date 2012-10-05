@@ -1,9 +1,16 @@
-<%= link_to "Ordenar por Alfabetização", sort_by_name_admins_items_path %>
-<ul id="sortable">
-	<% @items.each do |item| %>
-		<li class="ui-state-default" idItem="<%= item.id%>" >
-			<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-				<%= item.name %>
+<% unless @items.empty? %>
+	<ul class="menu_admin">
+		<li id="sort">
+			<%= link_to "Ordenar por Alfabetização", sort_by_name_admins_items_path %>
 		</li>
-	<%end%>
-</ul>
+	</ul>
+
+	<ul id="sortable">
+		<% @items.each do |item| %>
+			<li class="ui-state-default" idItem="<%= item.id%>" >
+				<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+					<%= item.name %>
+			</li>
+		<%end%>
+	</ul>
+<%end%>
