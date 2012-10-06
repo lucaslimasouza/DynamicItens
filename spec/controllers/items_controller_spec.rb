@@ -38,10 +38,10 @@ describe Admins::ItemsController do
 		   	get :sort_by_name, params
 		  end
 
-		  it "should redirect to index" do
+		  it "should redirect to root_path" do
 		  	build_stub_methods
 		    get :sort_by_name, params
-		    response.should redirect_to admins_items_path
+		    response.should redirect_to root_path
 		  end
 		end
 	  

@@ -1,3 +1,7 @@
-
 first_item:
-	name: "Item 1"
+  name: "B"
+  position: 0
+
+second_item:
+  name: "A"
+  position: 1
