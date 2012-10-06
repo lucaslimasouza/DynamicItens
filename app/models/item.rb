@@ -11,6 +11,4 @@ class Item < ActiveRecord::Base
   def self.by_name
     Item.unscoped { Item.find(:all, order: "name", select: "id").map { |item| item.id }} 
   end
-
- 
 end

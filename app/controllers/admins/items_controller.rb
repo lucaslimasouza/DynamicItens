@@ -15,7 +15,7 @@ class Admins::ItemsController < ApplicationController
 	def create
 		@item = Item.new(params[:item])
 		@item.save
-		redirect_to admins_items_path
+		redirect_to root_path
 	end
 
 	def update_position

@@ -11,6 +11,7 @@ describe Admins::ItemsController do
 	  it "creates a new Item" do
 	    Item.should_receive(:new).with("name" => "Item 1").and_return(item)
 	    post :create, item: {"name" =>"Item 1"}
+      response.should redirect_to root_path
 	  end
 	end
 
